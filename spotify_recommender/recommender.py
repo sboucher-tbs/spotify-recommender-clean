@@ -3,16 +3,49 @@ import pandas as pd
 import os
 import random
 
-# === CSS STYLE ===
+# === CSS STYLE (fond noir + sidebar gris) ===
 st.markdown("""
     <style>
-    div.stButton > button:first-child { background-color: #1DB954 !important; color: white !important; border-radius: 8px !important; border: none !important; }
-    input[type="text"], input[type="number"], textarea, select {
-        border: 2px solid #1DB954 !important; border-radius: 5px !important; padding: 8px !important; color: white !important;
+    /* Backgrounds */
+    body, .stApp, .block-container {
+        background-color: #000000;
     }
-    input:focus, textarea:focus, select:focus { border-color: #1DB954 !important; box-shadow: 0 0 10px #1DB954 !important; }
-    .stSlider > div > div > div { background: #1DB954 !important; }
-    h1, h2, h3, h4 { color: white !important; }
+
+    section[data-testid="stSidebar"] {
+        background-color: #1c1c1c;
+    }
+
+    /* Text and headers */
+    h1, h2, h3, h4, p, label, span {
+        color: white !important;
+    }
+
+    /* Buttons */
+    div.stButton > button:first-child {
+        background-color: #1DB954 !important;
+        color: white !important;
+        border-radius: 8px !important;
+        border: none !important;
+    }
+
+    /* Inputs */
+    input[type="text"], input[type="number"], textarea, select {
+        border: 2px solid #1DB954 !important;
+        border-radius: 5px !important;
+        padding: 8px !important;
+        color: white !important;
+        background-color: #1a1a1a !important;
+    }
+
+    input:focus, textarea:focus, select:focus {
+        border-color: #1DB954 !important;
+        box-shadow: 0 0 10px #1DB954 !important;
+    }
+
+    /* Sliders */
+    .stSlider > div > div > div {
+        background: #1DB954 !important;
+    }
     </style>
 """, unsafe_allow_html=True)
 
